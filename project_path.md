@@ -14,8 +14,8 @@
 >Add the reference to the link image at the end of the Markdown file
 <!-- -->
 >```bash
+> bash -c echo "\n\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> \n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
 >
->printf "\n\n<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
 >
 >```
 ><!-- -->
@@ -59,6 +59,6 @@ touch README.md \
 
 
 
-<--crate-type proc-macro --print=sysroot --print=split-debuginfo --print=crate-name Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> 
+<-- Don't Found a better way :-( - You know a better method? - send me a email --> 
 
 [1]: ./img/link_symbol.svg
