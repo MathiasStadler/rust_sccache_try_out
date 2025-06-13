@@ -29,11 +29,51 @@
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # cd && mkdir <project_name folder> && cd $_
 # command 'cd' change to home folder from logged in user
-project_name='test_project'
-echo "Create project => $project_name inside folder $(pwd)"
-cd && mkdir $project_name && cd $_  && code .
-unset $project_name
+set -o pipefail && \
+project_name='test_project' && \
+if [ -d ./$project_name ]; then echo "Folder already exits" ;else echo "Folder not exits"; echo "next"; fi; && \
+echo "Create project => $project_name inside folder $(pwd)" && \
+cd && \
+mkdir ./$project_name && \
+cd $_  && code . && \
+unset $project_name && \
 echo $?
+
+[ -d ./$project_name ] && echo "Folder already exits" || echo "Folder not exits"
+
+
+# set -o pipefail && \
+set -euxo pipefail && \
+project_name='test_project' && \
+if [ -d ./$project_name ]; then echo "Folder already exits" ; \
+else echo "Folder not exits"; \
+echo "next"; \
+echo "Create project => $project_name inside folder $(pwd)"; && \
+cd; && \
+mkdir ./$project_name; && \
+cd $_  && code .; && \
+fi;
+unset $project_name; && \
+echo $?;
+
+# as script
+cat <<EOF > /tmp/create_project.sh
+# set -o pipefail 
+set -euxo pipefail
+project_name='test_project' 
+if [ -d ./$project_name ]; then echo "Folder already exits" ; 
+else echo "Folder not exits"; 
+echo "next"; 
+echo "Create project => $project_name inside folder $(pwd)"; && 
+cd; && ´
+mkdir ./$project_name;  
+cd $_  && code .;
+fi;
+unset $project_name; 
+echo $?;
+EOF
+
+```
 
 >[!TIP]
 >How do I check if a directory exists or not in a Bash shell script

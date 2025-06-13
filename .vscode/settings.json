@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "debuginfo",
+        "euxo",
+        "pipefail",
         "rustup",
         "sccache"
     ]
