@@ -1,104 +1,46 @@
-# rust sccache try out
+<!-- TODO  missing project name-->
+# rust_sccache_try_out
 
-## This project shows how the Rust binary memory sccache significantly accelerates and optimizes the Rust build process
-
+>[!NOTE]
+>Symbol to mark web external links [![alt text][1]](./README.md)
 <!-- -->
 >[!TIP]
 >Fetch the link symbol from repo via command curl
 >
+>>-m, --mode=MODE [![alt text][1]](https://www.man7.org/linux/man-pages/man1/mkdir.1.html) \
+    set file mode (as in chmod), not a=rwx - umask
+>><!-- -->
+>>-p, --parents [![alt text][1]](https://www.man7.org/linux/man-pages/man1/mkdir.1.html) \
+    no error if existing, make parent directories as needed,
+    with their file modes unaffected by any -m option
+><!-- -->
 >```bash
+># create first the output-dir/folder
+>mkdir -p ./img
 >curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
 >```
 <!-- To comply with the format -->
->[!TIP]
->Add the reference to the link image at the end of the Markdown file
-<!-- -->
->```bash
-> bash -c echo "\n\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> \n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
->
->
->```
-><!-- -->
-
-<!-- -->
->[!TIP]
-> Don't forget to save your project on GitHub - saves you serious headaches
-<!-- -->
-## Create a new project folder and open it in the MS VSCODE program
+## Start Date of project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
-# cd && mkdir <project_name folder> && cd $_
-# command 'cd' change to home folder from logged in user
-set -o pipefail && \
-project_name='test_project' && \
-if [ -d ./$project_name ]; then echo "Folder already exits" ;else echo "Folder not exits"; echo "next"; fi; && \
-echo "Create project => $project_name inside folder $(pwd)" && \
-cd && \
-mkdir ./$project_name && \
-cd $_  && code . && \
-unset $project_name && \
-echo $?
-
-[ -d ./$project_name ] && echo "Folder already exits" || echo "Folder not exits"
-
-
-# set -o pipefail && \
-set -euxo pipefail && \
-project_name='test_project' && \
-if [ -d ./$project_name ]; then echo "Folder already exits" ; \
-else echo "Folder not exits"; \
-echo "next"; \
-echo "Create project => $project_name inside folder $(pwd)"; && \
-cd; && \
-mkdir ./$project_name; && \
-cd $_  && code .; && \
-fi;
-unset $project_name; && \
-echo $?;
-
-# as script
-cat <<EOF > /tmp/create_project.sh
-# set -o pipefail 
-set -euxo pipefail
-project_name='test_project' 
-if [ -d ./$project_name ]; then echo "Folder already exits" ; 
-else echo "Folder not exits"; 
-echo "next"; 
-echo "Create project => $project_name inside folder $(pwd)"; && 
-cd; && ´
-mkdir ./$project_name;  
-cd $_  && code .;
-fi;
-unset $project_name; 
-echo $?;
-EOF
-
+$ date
+Sat Jun 14 10:26:08 AM CEST 2025
 ```
 
->[!TIP]
->How do I check if a directory exists or not in a Bash shell script
+## OS-Version
 
-## Init a new rust based project inside the previously generated folder
-<!-- -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-touch README.md \
-&& ln -s README.md README \
-&& cargo init "." \
-&& cargo add rustfmt \
-&& rustup component add rustfmt \
-&& mkdir examples \
-&& cp src/main.rs examples/example.rs \
-&& sed -i -e 's/world/example/g' examples/example.rs \
-&& rustup  show \
-&& rustup  check \
-&& rustup toolchain uninstall stable \
-&& rustup toolchain install stable \
-&& rustup update  --force \
-&& rustup show \
-&& mkdir tests
+$ uname -a
+Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
+```
 
+>[!NOTE]
+>Show BASH version used
+><!-- -->
+>```bash
+>echo $BASH_VERSION
+>5.2.15(1)-release
+>```
 
-
-<-- Don't Found a better way :-( - You know a better method? - send me a email --> 
-
+<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
