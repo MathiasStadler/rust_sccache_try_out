@@ -27,7 +27,7 @@ FIXIT doesn't work
 >Add the reference to the link image at the end of the Markdown file
 <!-- -->
 >```bash
-> bash -c echo "\n\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> \n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
+> printf "\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
 >
 >
 >```
@@ -53,5 +53,5 @@ echo $BASH_VERSION
 5.2.15(1)-release
 ```
 
-<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
+<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
