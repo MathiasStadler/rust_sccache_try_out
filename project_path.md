@@ -1,11 +1,12 @@
-<!-- TODO  missing project name-->
-# rust_sccache_try_out
+# rust sccache try out
+
+## This project shows how the Rust binary memory sccache significantly accelerates and optimizes the Rust build process
 
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
 <!-- -->
 >[!TIP]
->Fetch the link symbol from repo via command curl
+>Get the link symbol with the curl command using the console
 >
 >>-m, --mode=MODE [![alt text][1]](https://www.man7.org/linux/man-pages/man1/mkdir.1.html) \
     set file mode (as in chmod), not a=rwx - umask
@@ -15,11 +16,22 @@
     with their file modes unaffected by any -m option
 ><!-- -->
 >```bash
-># create first the output-dir/folder
+># First make sure that the target directory exists
 >mkdir -p ./img
 >curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
 >```
 <!-- To comply with the format -->
+<!-- To comply with the format -->
+FIXIT doesn't work
+>[!TIP]
+>Add the reference to the link image at the end of the Markdown file
+<!-- -->
+>```bash
+> bash -c echo "\n\n<-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email --> \n\n[1]: ./img/link_symbol.svg"  >> ./project_path.md
+>
+>
+>```
+><!-- -->
 ## Start Date of project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
@@ -34,13 +46,12 @@ $ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 
->[!NOTE]
->Show BASH version used
-><!-- -->
->```bash
->echo $BASH_VERSION
->5.2.15(1)-release
->```
+## BASH version used
+<!-- -->
+```bash
+echo $BASH_VERSION
+5.2.15(1)-release
+```
 
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
