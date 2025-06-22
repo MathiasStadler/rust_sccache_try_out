@@ -1,9 +1,19 @@
 {
     "cSpell.words": [
+        "binutils",
+        "ccache",
         "debuginfo",
         "euxo",
+        "evcxr",
         "FIXIT",
+        "grcov",
+        "nextest",
+        "objcopy",
+        "objdump",
         "pipefail",
+        "profdata",
+        "readobj",
+        "rustfilt",
         "rustup",
         "sccache"
     ]
