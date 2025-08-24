@@ -125,7 +125,15 @@ touch README.md \
 && rustup show \
 && mkdir tests
 ```
-
+<!-- keep the format -->
+## Show which toolchain is active
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+rustup show
+# or better
+rustup show |sed -n '/active toolchain/,/^$/p'
+```
+<!-- keep the format -->
 >[!TIP]
 >Delete all installed crates
 <!-- To comply with the format -->
@@ -183,6 +191,13 @@ cargo uninstall  rustfilt
 >cargo install --list | grep  -c $0
 >TODO Add hunan  readable output
 >```
+<!-- -keep the format -->
+## Install sccache
+<!-- keep the format -->
+```bash<!-- markdownlint-disable-line code-block-style -->
+cargo add sccache
+```
+
 <!-- To comply with the format -->
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
