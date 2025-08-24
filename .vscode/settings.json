@@ -13,6 +13,7 @@
         "pipefail",
         "profdata",
         "readobj",
+        "rustc",
         "rustfilt",
         "rustup",
         "sccache"

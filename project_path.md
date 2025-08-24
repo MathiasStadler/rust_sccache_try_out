@@ -197,6 +197,39 @@ cargo uninstall  rustfilt
 ```bash<!-- markdownlint-disable-line code-block-style -->
 cargo add sccache
 ```
+<!-- keep the format -->
+## How To Install sccache on Debian 12 - local system [![alt text][1]](https://installati.one/install-sccache-debian-12/)
+<!-- keep the format -->
+```bash<!-- markdownlint-disable-line code-block-style -->
+cat /etc/os-release  |grep PRETTY_NAME
+# PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+cat /etc/debian_version
+# 12.11
+# update
+sudo apt-get update
+# install sccache
+sudo apt-get -y install sccache
+
+```
+<!-- keep the format -->
+## Create and add config
+<!-- keep the format -->
+```bash<!-- markdownlint-disable-line code-block-style -->
+# for user system wide
+touch  ~/.cargo/config.toml
+
+# config
+cat > ~/.cargo/config.toml << 'EoF'
+[build]
+rustc-wrapper = "/usr/bin/sccache"
+EoF
+```
+<!-- keep the format -->
+## Sho statistic for sccache [![alt text][1]](/https://github.com/wasmerio/sccache)
+<!-- keep the format -->
+```bash<!-- markdownlint-disable-line code-block-style -->
+sccache --show-stats
+```
 
 <!-- To comply with the format -->
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
